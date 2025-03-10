@@ -1,0 +1,44 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">Update the details</h1>
+    <div class="col-6 offset-3">
+        <form action="/campgrounds/<%=campground._id%>?_method=PUT" enctype="multipart/form-data" method="post">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title:</label>
+                <input  class="form-control" type="text" id="title" name="campground[title]" value="<%=campground.title%>">
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label" for="location">Location:</label>
+                <input class="form-control" type="text" id="location" name="campground[location]" value="<%=campground.location%>">
+            </div> 
+
+            <div class="mb-3">
+                <label class="form-label" for="price">Campground Price:</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
+                        aria-describedby="price-label" name="campground[price]" <%=campground.price%>>
+                </div>
+            </div> 
+
+            <div class="mb-3">
+                <label class="form-label" for="location">Description:</label>
+                <textarea class="form-control" type="number" id="location" name="campground[description]" value="<%=campground.description%>"></textarea>
+            </div> 
+            <div class="mb-3">
+                <div class="form-file custom-file">
+                    <input type="file" class="form-file-input" id="image" name="image" multiple>
+                    <label class="form-file-label" for="image">
+                        <span class="form-file-text custom-file-label">Add more image(s)...</span>
+                        <span class="form-file-button">Browse</span>
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">  
+                <button class="btn btn-info" >Edit Campground</button>
+            </div>
+        </form>
+        <a href="/campgrounds/<%=campground._id%>">Back To Campground</a>
+    </div>
+</div>    
