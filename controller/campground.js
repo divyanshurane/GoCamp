@@ -1,6 +1,5 @@
 const CampGround = require('../models/campground');
 const maptilerClient = require('@maptiler/client');
-// const maptilersdk = require('@maptiler/sdk');
 maptilerClient.config.apiKey = process.env.MAPTILER_API_KEY;
 const Review = require('../models/review');
 const { cloudinary } = require("../cloudinary");
