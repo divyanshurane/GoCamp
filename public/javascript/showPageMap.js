@@ -1,8 +1,8 @@
 
-// maptilersdk.config.apiKey = maptilerApiKey;
+maptilersdk.config.apiKey = maptilerApiKey;
 
 const map = new maptilersdk.Map({
-    container: 'mapti',
+    container: 'map',
     style: maptilersdk.MapStyle.BRIGHT,
     center: campground.geometry.coordinates, // starting position [lng, lat]
     zoom: 10 // starting zoom
