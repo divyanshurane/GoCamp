@@ -16,9 +16,8 @@ const campgrounds = require('./routes/campgrounds');
 const reviews = require('./routes/reviews');
 const users = require('./routes/users');
 const dbUrl = process.env.DB_URL;
+
 const MongoDBStore = require("connect-mongo")(session);
-
-
 
 // mongoose.connect('mongodb://127.0.0.1:27017/myCampGround',{
 // mongoose.connect('mongodb+srv://User1010:test1212@cluster0.mongodb.net/test?retryWrites=true&w=majority',{
@@ -44,6 +43,7 @@ app.engine('ejs',ejsMate);
 app.set('view engine','ejs');
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method')); 
+app.use(express.static(path.join(__dirname, 'public')));
 
 const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
 
