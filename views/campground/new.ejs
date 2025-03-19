@@ -2,7 +2,7 @@
 <div class="row">
     <h1 class="text-center">Add a new Campground</h1>
     <div class="col-6 offset-3">
-        <form action="/campgrounds" method="POST" enctype="multipart/form-data" novalidate class="validated-form">
+        <form action="/campgrounds" method="POST" enctype="multipart/form-data" class="validated-form">
             <div class="mb-3">
                 <label class="form-label" for="title">Title:</label>
                 <input  class="form-control" type="text" id="title" name="campground[title]" required>
@@ -14,9 +14,18 @@
             <div class="mb-3">
                 <label class="form-label" for="location">Location:</label>
                 <input class="form-control" type="text" id="location" name="campground[location]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
             </div> 
-            <div>
-                <input type="file" id="name" name="image" multiple>
+            <div class="mb-3">
+                <div class="form-file custom-file">
+                    <input type="file" class="form-file-input" id="image" name="image" multiple>
+                    <label class="form-file-label" for="image">
+                        <span class="form-file-text custom-file-label">Choose image(s)...</span>
+                        <span class="form-file-button">Browse</span>
+                    </label>
+                </div>
             </div>
             <!-- <div class="mb-3">
                 <label class="form-label" for="location">Image URL:</label>
@@ -29,6 +38,9 @@
                     <span class="input-group-text" id="price-label">$</span>
                     <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
                         aria-describedby="price-label" name="campground[price]" required>
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
                 </div>
             </div> 
 
@@ -44,3 +56,5 @@
             <a href="/campgrounds">All Campground</a>
     </div>
 </div>    
+
+
