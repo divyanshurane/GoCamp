@@ -4,8 +4,6 @@ const map = new maptilersdk.Map({
     container: 'cluster-map',
     style: maptilersdk.MapStyle.BRIGHT,
     center: [75.300293 , 19.663280],
-    // 20.5937° N, 78.9629
-    // 19.663280, 75.300293
     zoom: 3
 });
 
